@@ -8,5 +8,6 @@ defmodule JobServiceWeb.Router do
   scope "/api", JobServiceWeb do
     pipe_through :api
     resources "/jobs", JobController, only: [:create]
+    post "/jobs/bash", JobController, :bash
   end
 end
